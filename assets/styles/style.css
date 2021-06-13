@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+   font-family: "Quicksand";
+}
+
+.profile header {
+   text-align: center;
+   margin-top: 10px;
+}
+
+nav {
+   position: absolute;
+   background-color: #00a2c6;
+   padding: 5px;
+   position: sticky;
+   top: 0;         
+   z-index: 100;
+}
+
+.header-left {
+   float: left;
+   margin-right: 150px;
+   position: relative;
+   top: 50px;
+   left: 50px;
+}
+
+/* untuk mengatur navigasi agar cocok dengan header*/
+nav li {
+   display: inline; /*elemen akan ditampilkan tanpa membuat baris baru*/
+   list-style-type: none; /*menghilangkan tanda titik yang dihasilkan tiap item pada list.*/
+   margin-right: 20px;
+}
+
+nav a {
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   padding: 0 25px;
+   transition: all 0.5s;
+   font-size: 18px;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+    
+li a:hover {  /* untuk menyorot menu*/
+   font-weight: bold;
+   background-color: rgba(255, 255, 255, 0.3);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   font-size: 24px;
+}
+
+.header-right {
+   float: right;
+   margin-right: -25px;
+ }
+ 
+ .header-right a {
+   line-height: 65px;
+   padding: 0 25px;
+   color: white;
+   display: block;
+   float: left;
+   transition: all 0.5s;
+ }
+
+.logo {
+   width: 100px;
+   margin-top: -50px;
+ }
+
+/* untuk mengatur gambar*/
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+/* untuk mengatur gambar aside*/
+.featured-image-aside {
+   width: 120%;
+   max-height: 400px;
+   max-width: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+    
+/* untuk mengatur box pada setiap content*/
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 20px;
+   margin-top: 20px;
+}   
+        
+/* untuk mengatur box pada header dengan memberi warna*/
+.jumbotron {
+   font-size: 20px;
+   padding: 20px;
+   background-color: #00c8eb;
+   text-align: center;
+   color: white;
+}     
+
+/* perlu sedikit jarak agar konten yang ditampilkan sedikit nyaman untuk dilihat*/
+main {
+   padding: 50px;
+   overflow: auto;
+}
+
+/* untuk memindahkan suatu elemen untuk berada sebelah di kiri atau kanan*/
+#content {
+   float: left;
+   width: 70%; 
+}
+   
+/* elemen <aside> dan <footer> akan berpindah menempati ruang yang sebelumnya digunakan oleh #content */
+aside {
+   float: right;
+   width: 30%;          /* elemen aside hanya dapat memiliki 25% ruang yang tersedia untuk ditempati*/
+   padding-left: 20px;  /* berikan sedikit jarak antara #content dan aside agar tidak nampak berhimpitan*/
+                           /* Tambahkanlah padding-left pada aside agar konten yang ditampilkan lebih menjorok ke kiri*/
+}
+
+/* menentukan dimensi kotak dengan tepat, tanpa dipengaruhi oleh padding dan border.
+selector * untuk menetapkan pengukuran box-sizing untuk seluruh elemen HTML*/
+* {
+   box-sizing: border-box;
+}
+
+/*Buat elemen <header> sebagai induk dari elemen <nav> yang menerapkan properti display dengan nilai inline*/
+header {
+   display: inline;
+}
+
+h2,h3 {
+    color: #00a2c6
+}
+
+th {
+   padding-right: 5px;
+}
+ 
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #00a2c6;
+   text-align: center;
+   font-weight: bold;
+   @font-face {
+        font-family: "Quicksand";
+        src: url('FILE-FONT.TTF');
+        
+   }  
+}
+
+.main-content img{
+   margin: 0;
+   padding: 0;
+   width: 1188px;
+   display: block;
+}
+
+.overlay {
+   position: absolute;
+   width: 1188px;
+   opacity: 0;
+}
+
+.main-content:hover .overlay {
+   opacity: 1;
+   height: 468px;
+   font-size: 40px;
+   text-align: center;
+   transition: .5s ease;
+   top: 16.5%;
+}
+
+.overlay img{
+   width: 1188px;
+   height: 468px;
+}

@@ -1,0 +1,17 @@
+/*  Rule yang dituliskan dalam block @media di bawah 
+akan diterapkan pada device yang memiliki ukuran viewport di bawah 1000px */
+@media screen and (max-width: 1000px) {
+    #content,
+    aside {
+       width: 100%;
+       padding: 0;
+    }
+ }
+ 
+ @media screen and (max-width: 670px) {
+    #content,
+    aside {
+       width: 100%;
+       padding: 0;
+    }
+ }
